@@ -1,8 +1,10 @@
 #! /usr/bin/env node
-import program from 'commander';
+import { Command } from 'commander';
 
 import { diffCommand, regressionCommand, resultsCommand } from '../commands';
 import packageJSON from '../../package.json';
+
+const program = new Command();
 
 program
   .name(packageJSON.name)
